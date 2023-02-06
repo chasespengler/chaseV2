@@ -16,7 +16,7 @@ import {
 
 const NavBar = ({ toggle }) => {
 
-    const [aboutHome, setAboutHome] = useState(true)
+    const [aboutHome, setAboutHome] = useState(true);
 
     function handleClickOff(){
         setAboutHome(false);
@@ -48,13 +48,13 @@ const NavBar = ({ toggle }) => {
                         }
                     </NavItem>
                     <NavItem>
-                        <NavLinksR to="/analyze" onClick={handleClickOff}>
-                            Analyze
+                        <NavLinksR to="/projects" onClick={handleClickOff}>
+                            Projects
                         </NavLinksR>
                     </NavItem>
                     <NavItem>
-                        <NavLinksR to="/services" onClick={handleClickOff}>
-                            Services
+                        <NavLinksR to="/Blog" onClick={handleClickOff}>
+                            Blog
                         </NavLinksR>
                     </NavItem>
                 </NavMenu>

@@ -3,7 +3,6 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-    background: #000;
     height: 80px;
     /* margin-top: -80px; */
     display: flex;
@@ -14,7 +13,7 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 10;
     width: 100%;
-    opacity: 20%;
+    background: linear-gradient(90deg, white 0%, #000 30%);
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -29,6 +28,8 @@ export const Nav = styled.nav`
         transition: all 0.5s ease-in-out;
         opacity: 20%;
     }
+    
+
 `;
 
 export const NavbarContainer = styled.div`
@@ -38,6 +39,7 @@ export const NavbarContainer = styled.div`
     z-index: 1;
     width: 100vw;
     padding: 0 25px;
+
 `
 
 export const NavLogo = styled(LinkR)`
@@ -51,7 +53,6 @@ export const NavLogo = styled(LinkR)`
     text-decoration: none;
     padding: 10px;
     margin-left: 0px;
-    background: white;
 
     @media screen and (max-width: 480px) {
         font-size: .9rem;
@@ -109,7 +110,7 @@ export const NavLinksS = styled(LinkS)`
     }
 
     &:hover {
-        color: #0a80ff;
+        color: rgb(98, 140, 175);
         transition: 0.2s ease-in-out;
     }
 `;
@@ -128,7 +129,7 @@ export const NavLinksR = styled(LinkR)`
     }
 
     &:hover {
-        color: #0a80ff;
+        color: rgb(98, 140, 175);
         transition: 0.2s ease-in-out;
     }
 `;
@@ -144,7 +145,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
-    background: #0a80ff;
+    background: rgb(98, 140, 175);
     white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
