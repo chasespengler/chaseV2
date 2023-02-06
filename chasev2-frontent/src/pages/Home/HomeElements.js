@@ -65,6 +65,7 @@ export const HeroH1 = styled.h1`
     margin-left: 125px;
     max-width: 100%;
     padding-left: 10px;
+    font-family: 'Smooch', cursive;
 
     @media screen and (max-width: 480px) {
         font-size: 200%;
