@@ -26,10 +26,10 @@ export const Nav = styled.nav`
 
     &:not(:hover) {
         transition: all 0.5s ease-in-out;
-        opacity: 20%;
+        opacity: 30%;
     }
-    
 
+    // make opacity 100% on page load and then fade out to ~30%
 `;
 
 export const NavbarContainer = styled.div`

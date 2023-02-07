@@ -27,12 +27,18 @@ export const HeroContainer = styled.div`
 `
 
 export const AboutContainer = styled.div`
-     background: linear-gradient(0deg, #113137 5%, #fff 100%);
-     min-height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+    background: linear-gradient(0deg, #113137 5%, #fff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 
+export const ContentContainer = styled.div`
+    background: linear-gradient(0deg, #113137 5%, #fff 100%);
+    min-height: 100vh;
+    white-space: nowrap;
+    overflow-x: auto;
 `
 
 export const HeroBg = styled.div`

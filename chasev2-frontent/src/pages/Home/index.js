@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Video from '../../videos/topview_ocean.mp4'
 import Img1 from '../../images/CR_beach1.JPG'
+import Foot from '../../components/Footer'
 import {
     HeroContainer,
     HeroBg,
@@ -12,6 +13,7 @@ import {
     ArrowForward,
     ArrowRight,
     HeroPContainer,
+    ContentContainer,
     AboutContainer,
     HeroFg,
     ImgFg
@@ -29,6 +31,7 @@ const HomePage = () => {
     };
 
     const heroContent = dater['homeHeroContent'];
+    const aboutContent = dater['aboutContent'];
 
   return (
     <>
@@ -49,13 +52,23 @@ const HomePage = () => {
         </HeroContent>
     </HeroContainer>
     <AboutContainer id="about">
-        hi
+        {aboutContent}
     </AboutContainer>
     <AboutContainer style={{"margin-top": 0, "background": "white"}}>
         <HeroFg>
             <ImgFg src={Img1} type="image/JPG"></ImgFg>
         </HeroFg>
     </AboutContainer>
+    <ContentContainer className="container-fluid container-scroll hide-scrollbar">
+        <div className="row flex-nowrap">
+            <div className="col-5" style={{"display": "inline-block", "float": "none"}}>Field 1</div>
+            <div className="col-5" style={{"display": "inline-block", "float": "none"}}>Field 1</div>
+            <div className="col-5" style={{"display": "inline-block", "float": "none"}}>Field 1</div>
+            <div className="col-5" style={{"display": "inline-block", "float": "none"}}>Field 1</div>
+            <div className="col-5" style={{"display": "inline-block", "float": "none"}}>Field 1</div>
+        </div>
+    </ContentContainer>
+    <Foot></Foot>
     </>
   )
 }

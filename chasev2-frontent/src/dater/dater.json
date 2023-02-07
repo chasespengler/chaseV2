@@ -1,3 +1,11 @@
 {
-    "homeHeroContent": "Hi, I'm Chase and welcome to my website. Here you can find a portfolio of software engineering projects I've built and worked on, a blog covering a mixed bag of interests, hobbies and the occasional luke-warm take, as well as photographs and excerpts from my travels. Enjoy!"
+    "homeHeroContent": "Hi, I'm Chase and welcome to my website. Here you can find a portfolio of software engineering projects I've built and worked on, a blog covering a mixed bag of interests, hobbies and the occasional luke-warm take, as well as photographs and excerpts from my travels. Enjoy!",
+    "aboutContent": "hi",
+    "projects": [
+        {
+            "title": "P1",
+            "summary": "a fun project about coding where you code and i code and we all have fun",
+            "link": "github.com"
+        }
+    ]
 }
