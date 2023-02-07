@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Video from '../../videos/topview_ocean.mp4'
+import Img1 from '../../images/CR_beach1.JPG'
 import {
     HeroContainer,
     HeroBg,
@@ -9,10 +10,15 @@ import {
     HeroH1,
     HeroP,
     ArrowForward,
-    ArrowRight
+    ArrowRight,
+    HeroPContainer,
+    AboutContainer,
+    HeroFg,
+    ImgFg
 } from './HomeElements'
 
 import dater from '../../dater/dater.json'
+import { withTheme } from 'styled-components'
 
 const HomePage = () => {
 
@@ -34,14 +40,22 @@ const HomePage = () => {
             <HeroH1>
                 Welcome!
             </HeroH1>
+            <HeroPContainer>
             <HeroP>
                 {heroContent}
             </HeroP>
+            </HeroPContainer>
+
         </HeroContent>
     </HeroContainer>
-    <div id="about" className='d-flex justify-content-center align-items-center' style={{height: "100vh", background: "green"}}>
+    <AboutContainer id="about">
         hi
-    </div>
+    </AboutContainer>
+    <AboutContainer style={{"margin-top": 0, "background": "white"}}>
+        <HeroFg>
+            <ImgFg src={Img1} type="image/JPG"></ImgFg>
+        </HeroFg>
+    </AboutContainer>
     </>
   )
 }

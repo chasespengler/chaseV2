@@ -13,7 +13,7 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 10;
     width: 100%;
-    background: linear-gradient(90deg, white 0%, #000 30%);
+    background: linear-gradient(90deg, white 0%, #113137 30%);
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;

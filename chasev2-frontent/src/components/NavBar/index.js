@@ -53,7 +53,7 @@ const NavBar = ({ toggle }) => {
                         </NavLinksR>
                     </NavItem>
                     <NavItem>
-                        <NavLinksR to="/Blog" onClick={handleClickOff}>
+                        <NavLinksR to="/blog" onClick={handleClickOff}>
                             Blog
                         </NavLinksR>
                     </NavItem>
