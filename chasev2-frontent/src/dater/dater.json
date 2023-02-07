@@ -5,7 +5,20 @@
         {
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
-            "link": "github.com"
+            "link": "github.com",
+            "img_src": "CS.png"
+        },
+        {
+            "title": "P1",
+            "summary": "a fun project about coding where you code and i code and we all have fun",
+            "link": "github.com",
+            "img_src": "CS.png"
+        },
+        {
+            "title": "P1",
+            "summary": "a fun project about coding where you code and i code and we all have fun",
+            "link": "github.com",
+            "img_src": "CS.png"
         }
     ]
 }
