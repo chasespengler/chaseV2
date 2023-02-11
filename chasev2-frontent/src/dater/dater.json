@@ -1,23 +1,33 @@
 {
     "homeHeroContent": "Hi, I'm Chase and welcome to my website. Here you can find a portfolio of software engineering projects I've built and worked on, a blog covering a mixed bag of interests, hobbies and the occasional luke-warm take, as well as photographs and excerpts from my travels. Enjoy!",
-    "aboutContent": "hi",
+    "aboutContent": [
+        "P1 asdfsafasds fdsafsdafsadf asdfsdafdssf asdfasfsadfsdaafsa asdfasdfsadfasdfsdfs asdfsdafsdfsdfsa asdfsadfsadfsdfasd asdfdsfsdafsdfsdaf asdfasdfsadfsdf asdfsdfsad asdfsadf asdfasf asdfas sdfsadfasdsdaaf asdfasd asdf",
+        "P2",
+        "P3"
+    ],
     "projects": [
         {
+            "title": "Chess Engine and AI",
+            "summary": "A quick passion project of mine, I built this chess engine as a fun project and a quick dive into game development. I wanted to build out a chess engine so I could build bots to play against, train using ML, and study unique chess lines. The entire engine is built using Python and the pygame module. Pygame is very user friendly, and I look forward to building another game using more of its functionality in the future such as its sprite features and potentially joystick as well. Click here to check it out on GitHub!",
+            "link": "https://www.github.com",
+            "img_src": "chess-cover.jpg"
+        },
+        {
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
-            "link": "github.com",
+            "link": "https://github.com",
             "img_src": "CS.png"
         },
         {
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
-            "link": "github.com",
+            "link": "https://github.com",
             "img_src": "CS.png"
         },
         {
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
-            "link": "github.com",
+            "link": "https://github.com",
             "img_src": "CS.png"
         }
     ]

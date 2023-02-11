@@ -31,7 +31,7 @@ const NavBar = ({ toggle }) => {
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">
-                    <NavImg src={require("../../images/CS.png")} alt="logo" class="logo" id="nav-logo"/>
+                    <NavImg src={require("../../images/CS.png")} alt="logo" className="logo" id="nav-logo"/>
                 </NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars />
@@ -48,9 +48,9 @@ const NavBar = ({ toggle }) => {
                         }
                     </NavItem>
                     <NavItem>
-                        <NavLinksR to="/projects" onClick={handleClickOff}>
+                        <NavLinksS to="projects">
                             Projects
-                        </NavLinksR>
+                        </NavLinksS>
                     </NavItem>
                     <NavItem>
                         <NavLinksR to="/blog" onClick={handleClickOff}>

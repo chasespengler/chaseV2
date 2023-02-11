@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+import {Row} from 'react-bootstrap'
+
+export const Home = styled.div`
+
+`
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -131,4 +136,25 @@ export const ArrowForward = styled(MdArrowForward)`
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
+`
+
+export const ArrowRightBig = styled(ArrowRight)`
+    font-size: 4.5em;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        color: gold;
+    }
+
+    &:before {
+        transition: all ease-in-out 2500ms;
+    }
+`
+
+export const CarouselRow = styled(Row)`
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 `

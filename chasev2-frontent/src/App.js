@@ -1,10 +1,10 @@
 import './App.css';
 import {HashRouter as Router, Route, Routes} from 'react-router-dom';
-import React, {useState, useEffect} from 'react'
-import LoginPage from './pages/LoginPage'
-import HomePage from './pages/Home'
+import React, {useState, useEffect} from 'react';
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/Home';
 import NavBar from './components/NavBar';
-import {useLocation} from 'react-router-dom'
+import {useLocation} from 'react-router-dom';
 
 export function Checky() {
   const {pathname} = useLocation();
