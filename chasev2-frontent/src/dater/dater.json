@@ -1,30 +1,33 @@
 {
     "homeHeroContent": "Hi, I'm Chase and welcome to my website. Here you can find a portfolio of software engineering projects I've built and worked on, a blog covering a mixed bag of interests, hobbies and the occasional luke-warm take, as well as photographs and excerpts from my travels. Enjoy!",
     "aboutContent": [
-        "P1 asdfsafasds fdsafsdafsadf asdfsdafdssf asdfasfsadfsdaafsa asdfasdfsadfasdfsdfs asdfsdafsdfsdfsa asdfsadfsadfsdfasd asdfdsfsdafsdfsdaf asdfasdfsadfsdf asdfsdfsad asdfsadf asdfasf asdfas sdfsadfasdsdaaf asdfasd asdf",
+        "Born and raised in the beautiful beach town of Delray Beach in sunny South Florida, I grew up a waterman, spending extensive amounts of time outside and in the ocean. This lead to my passion for travel, experiencing new and unique cultures, and embarking upon any adventure or new experience I can get my hands on, solo or with friends. To quote the late Anthony Bourdain 'I want to try everything once.' Please see my travel and photography pages for updates on adventures recent and old as well as pictures from the tales. Here you can read and see all about whatever activity I'm currently most interested in.",
         "P2",
         "P3"
     ],
     "projects": [
-        {
+        {   "id": 1,
             "title": "Chess Engine and AI",
             "summary": "A quick passion project of mine, I built this chess engine as a fun project and a quick dive into game development. I wanted to build out a chess engine so I could build bots to play against, train using ML, and study unique chess lines. The entire engine is built using Python and the pygame module. Pygame is very user friendly, and I look forward to building another game using more of its functionality in the future such as its sprite features and potentially joystick as well. Click here to check it out on GitHub!",
             "link": "https://www.github.com",
             "img_src": "chess-cover.jpg"
         },
         {
+            "id": 2,
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
             "link": "https://github.com",
             "img_src": "CS.png"
         },
         {
+            "id": 3,
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
             "link": "https://github.com",
             "img_src": "CS.png"
         },
         {
+            "id": 4,
             "title": "P1",
             "summary": "a fun project about coding where you code and i code and we all have fun",
             "link": "https://github.com",

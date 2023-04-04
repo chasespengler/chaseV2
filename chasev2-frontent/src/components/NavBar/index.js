@@ -14,16 +14,14 @@ import {
     NavImg,
 } from './NavBarElements'
 
-const NavBar = ({ toggle }) => {
-
-    const [aboutHome, setAboutHome] = useState(true);
-
-    function handleClickOff(){
-        setAboutHome(false);
-    };
+const NavBar = ({ toggle, isScroll, toggleNavButtonsType }) => {
 
     function handleClickOn(){
-        setAboutHome(true);
+        toggleNavButtonsType(true);
+    };
+
+    function handleClickOff(){
+        toggleNavButtonsType(false);
     };
 
     return (
@@ -38,7 +36,7 @@ const NavBar = ({ toggle }) => {
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        { aboutHome ? 
+                        { isScroll ? 
                             <NavLinksS to='about'>
                                 About
                             </NavLinksS> :
@@ -48,18 +46,28 @@ const NavBar = ({ toggle }) => {
                         }
                     </NavItem>
                     <NavItem>
-                        <NavLinksS to="projects">
-                            Projects
-                        </NavLinksS>
+                        { isScroll ?
+                            <NavLinksS to="projects">
+                                Projects
+                            </NavLinksS> :
+                            <NavLinksR to="/projects">
+                                Projects
+                            </NavLinksR>
+                        }
                     </NavItem>
                     <NavItem>
-                        <NavLinksR to="/blog" onClick={handleClickOff}>
-                            Blog
-                        </NavLinksR>
+                        { isScroll ?
+                            <NavLinksS to="blog">
+                                Blog
+                            </NavLinksS> :
+                            <NavLinksR to="/blog">
+                                Blog
+                            </NavLinksR>
+                        }
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/signin">
+                    <NavBtnLink to="/signin" onClick={handleClickOff}>
                         Contact
                     </NavBtnLink>
                 </NavBtn>

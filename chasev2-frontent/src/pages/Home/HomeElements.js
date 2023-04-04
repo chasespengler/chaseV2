@@ -43,7 +43,7 @@ export const ContentContainer = styled.div`
     background: linear-gradient(0deg, #113137 5%, #fff 100%);
     min-height: 100vh;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
 `
 
 export const HeroBg = styled.div`
@@ -131,6 +131,12 @@ export const HeroBtnWrapper = styled.div`
 export const ArrowForward = styled(MdArrowForward)`
     margin-left: 8px;
     font-size: 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: gold;
+        transform: scale(1.5);
+    }
 `
 
 export const ArrowRight = styled(MdKeyboardArrowRight)`
@@ -143,7 +149,7 @@ export const ArrowRightBig = styled(ArrowRight)`
 
     &:hover {
         cursor: pointer;
-        transform: scale(1.05);
+        transform: scale(1.25);
         color: gold;
     }
 
@@ -157,4 +163,19 @@ export const CarouselRow = styled(Row)`
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+`
+
+export const AboutCarouselP = styled.p`
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-self: center;
+    font-size: 25px;
+    font-family: 'Caveat', cursive;
+`
+
+export const SectionHeading = styled.h3`
+    &:hover {
+        cursor: pointer;
+    }
 `
