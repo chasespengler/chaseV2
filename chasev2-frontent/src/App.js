@@ -45,7 +45,6 @@ function App() {
   window.onchange = function() {
     console.log('changed')
   }
-  
 
   const toggleNavButtonsType = (setType) => {
     setIsScroll(setType);

@@ -33,5 +33,40 @@
             "link": "https://github.com",
             "img_src": "CS.png"
         }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "title": "First Blog Post!",
+            "summary": "lorem ipsum",
+            "link": "https://github.com",
+            "img_src": "CS.png",
+            "text": "lorem ipsum"
+        },
+        {
+            "id": 2,
+            "title": "First Blog Post!",
+            "summary": "lorem ipsum",
+            "link": "https://github.com",
+            "img_src": "CS.png",
+            "text": "lorem ipsum"
+        },
+        {
+            "id": 3,
+            "title": "First Blog Post!",
+            "summary": "lorem ipsum",
+            "link": "https://github.com",
+            "img_src": "CS.png",
+            "text": "lorem ipsum"
+        },
+        {
+            "id": 4,
+            "title": "First Blog Post!",
+            "summary": "lorem ipsum",
+            "link": "https://github.com",
+            "img_src": "CS.png",
+            "text": "lorem ipsum"
+        }
     ]
+    
 }

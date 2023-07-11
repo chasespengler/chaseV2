@@ -18,8 +18,7 @@ export default function BlogPage() {
     }
 
     return (
-        <>
-        <div id="bloggyblogblog">
+        <BlogContainer id="bloggyblogblog">
             <div id='blog-header' className='text-center'>
                 <h1>Blog</h1>
             </div>
@@ -35,7 +34,6 @@ export default function BlogPage() {
                 </div>
                 <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={40} />
             </div>
-        </div>
-        </>
+        </BlogContainer>
     );
 }
