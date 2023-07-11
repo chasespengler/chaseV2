@@ -46,6 +46,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
     const heroContent = dater['homeHeroContent'];
     const aboutContent = dater['aboutContent'];
     const projects = dater['projects'];
+    const blogs = dater['blogs'];
 
   return (
     <Home>
