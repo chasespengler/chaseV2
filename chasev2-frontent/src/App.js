@@ -3,7 +3,8 @@ import {HashRouter as Router, Route, Routes} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/Home';
-import BlogPage from './pages/Blog'
+import BlogPage from './pages/Blog';
+import ProjectsPage from './pages/Projects'
 import NavBar from './components/NavBar';
 import {useLocation} from 'react-router-dom';
 import Foot from './components/Footer';
@@ -28,7 +29,23 @@ function App() {
     setIsOpen(!isOpen)
   }
 
-  const [isScroll, setIsScroll] = useState(true)
+  var navState = true
+  if (window.location.href.substring(window.location.href.lastIndexOf('/')+1)) {
+    navState = false
+  } else {
+    navState = true
+  };
+
+  const [isScroll, setIsScroll] = useState(navState);
+
+  window.onload = function() {
+    console.log('loaded')
+  }
+
+  window.onchange = function() {
+    console.log('changed')
+  }
+  
 
   const toggleNavButtonsType = (setType) => {
     setIsScroll(setType);
@@ -38,11 +55,12 @@ function App() {
     <Router>
       <NavBar toggle={toggle} isScroll={isScroll} toggleNavButtonsType={toggleNavButtonsType}/>
       <Routes>
-        <Route exact path="/" element={<HomePage toggleNavButtonsType={toggleNavButtonsType}/>} />
+        <Route exact path="/" element={<HomePage toggleNavButtonsTypeHome={toggleNavButtonsType}/>} />
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/blog" element={<BlogPage />} />
+        <Route exact path="/projects" element={<ProjectsPage />} />
       </Routes>
-      <Foot ></Foot>
+      <Foot></Foot>
     </Router>
   );
 }

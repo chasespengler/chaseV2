@@ -1,9 +1,9 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import Video from '../../videos/topview_ocean.mp4';
 import Img1 from '../../images/CR_beach1.JPG';
 import Img2 from '../../images/db_beach.JPEG';
 import CarouselCard from '../../components/CarouselCard';
-import {Container, Card, Col, Carousel, Row} from 'react-bootstrap';
+import {Container, Col, Carousel, Row} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import {
     Home,
@@ -27,30 +27,19 @@ import {
 
 import dater from '../../dater/dater.json'
 
-export default function HomePage({ toggleNavButtonsType }) {
+export default function HomePage({ toggleNavButtonsTypeHome }) {
 
     const navigate = useNavigate();
 
-    const [hover, setHover] = useState(false)
-
-    const onHover = () => {
-        setHover(!hover)
-    };
-
     const ref = useRef(null);
 
-    const slide = (shift) => {
-        console.log("HERE")
-        ref.current.ScrollLeft += shift;
-    };
-
     const handleProjectArrow = () => {
-        toggleNavButtonsType(false);
+        toggleNavButtonsTypeHome(false);
         navigate('/projects');
     };
 
     const handleBlogArrow = () => {
-        toggleNavButtonsType(false);
+        toggleNavButtonsTypeHome(false);
         navigate('/blog');
     };
 
@@ -95,7 +84,7 @@ export default function HomePage({ toggleNavButtonsType }) {
         </HeroFg>
     </AboutContainer>
     <ContentContainer ref={ref} id="projects" className="container-fluid container-scroll pt-5">
-        <Row style={{"position": "absolute", "width": "100%", "margin-top": "-1.5%"}}>
+        <Row style={{"position": "absolute", "width": "100%", "marginTop": "-1.5%"}}>
             <Col xs={12} className="text-center">
                 <SectionHeading onClick={handleProjectArrow}>Projects <ArrowForward /></SectionHeading>
             </Col>
