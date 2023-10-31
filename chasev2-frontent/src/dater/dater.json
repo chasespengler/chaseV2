@@ -32,6 +32,13 @@
             "summary": "a fun project about coding where you code and i code and we all have fun",
             "link": "https://github.com",
             "img_src": "CS.png"
+        },
+        {
+            "id": 5,
+            "title": "P1",
+            "summary": "a fun project about coding where you code and i code and we all have fun",
+            "link": "https://github.com",
+            "img_src": "CS.png"
         }
     ],
     "blogs": [

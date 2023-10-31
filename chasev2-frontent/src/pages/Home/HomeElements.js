@@ -42,8 +42,6 @@ export const AboutContainer = styled.div`
 export const ContentContainer = styled.div`
     background: linear-gradient(0deg, #113137 5%, #fff 100%);
     min-height: 100vh;
-    white-space: nowrap;
-    overflow-x: scroll;
 `
 
 export const HeroBg = styled.div`
@@ -178,4 +176,6 @@ export const SectionHeading = styled.h3`
     &:hover {
         cursor: pointer;
     }
+    display: flex;
+    justify-content: center;
 `

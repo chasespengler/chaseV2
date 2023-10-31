@@ -2,14 +2,14 @@ import React from 'react'
 
 export default function Foot() {
   return (
-    <div id="outer-foot" style={{"background": "linear-gradient(90deg, #113137 0%, white 30%)", "max-height": "125px"}}>
-      <div className="container-fluid" id="foot">
-        <footer className="panel-footer">
-          <div className="text-center" id="footer-text">
-            <span>
+    <div id="outer-foot" style={{"background": "linear-gradient(90deg, #113137 0%, white 30%)", "maxHeight": "125px"}}>
+      <div id="foot">
+        <footer>
+          <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'minHeight': '75px'}} id="footer-text">
               <img style={{"maxHeight": "45px"}} src={require("../../images/CS.png")} alt="logo" id="footer-logo"/>
-              Website designed by and property of Chase Spengler.
-            </span>
+              <span>
+                Website designed by and property of Chase Spengler.
+              </span>
           </div>
         </footer>
       </div>

@@ -1,10 +1,11 @@
-import React, {useRef} from 'react';
+import React, { useState, useEffect } from 'react';
 import Video from '../../videos/topview_ocean.mp4';
 import Img1 from '../../images/CR_beach1.JPG';
 import Img2 from '../../images/db_beach.JPEG';
 import CarouselCard from '../../components/CarouselCard';
 import {Container, Col, Carousel, Row} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import {MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import {
     Home,
     HeroContainer,
@@ -31,8 +32,6 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
 
     const navigate = useNavigate();
 
-    const ref = useRef(null);
-
     const handleProjectArrow = () => {
         toggleNavButtonsTypeHome(false);
         navigate('/projects');
@@ -47,6 +46,14 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
     const aboutContent = dater['aboutContent'];
     const projects = dater['projects'];
     const blogs = dater['blogs'];
+
+    const [isHover, setIsHover] = useState(false)
+
+    const arrowStyle = {
+        opacity: isHover ? '1' : '0.5',
+        color: isHover ? 'gold' : 'grey',
+        transform: isHover ? 'scale(1.5)' : 'scale(1)',
+    }
 
   return (
     <Home>
@@ -84,20 +91,29 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
             <ImgFg src={Img1} type="image/JPG"></ImgFg>
         </HeroFg>
     </AboutContainer>
-    <ContentContainer ref={ref} id="projects" className="container-fluid container-scroll pt-5">
+    <ContentContainer id="projects" className="pt-5">
         <Row style={{"position": "absolute", "width": "100%", "marginTop": "-1.5%"}}>
             <Col xs={12} className="text-center">
-                <SectionHeading onClick={handleProjectArrow}>Projects <ArrowForward /></SectionHeading>
+                <SectionHeading onClick={handleProjectArrow}>Projects <ArrowForward className='mt-2.5' /></SectionHeading>
             </Col>
         </Row>
-        {/* <div style={{"position": "absolute", "margin-top": "40vh", "right": "0", "z-index": "999"}}>
-            <ArrowRightBig onClick={() => slide(50)}/>
-        </div> */}
-        <CarouselRow style={{"paddingLeft": 40}} ref={ref}>
-            {projects.map((project, index) => (
-                <CarouselCard key={index} cardInfo = {project} />
-            )) }
-        </CarouselRow>
+        <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
+            <MdChevronLeft className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+                var slider = document.getElementById('projects-slider');
+                slider.scrollLeft = slider.scrollLeft - 500;
+            }} size={50} />
+            <div id='projects-slider' className={'w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'}>  
+                {projects.map((project, index) => (
+                                <Col xs={11} sm={8} md={5} lg={4} xl={3} className={'inline-block m-2 text-center cursor-pointer hover:scale-105 ease-in-out duration-300'}>
+                                    <CarouselCard key={index} cardInfo = {project} />
+                                </Col>
+                            ))}
+            </div>
+            <MdChevronRight className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+                var slider = document.getElementById('projects-slider');
+                slider.scrollLeft = slider.scrollLeft + 500;
+            }} size={50} />
+        </div>
     </ContentContainer>
     <AboutContainer style={{"marginTop": 0, "background": "white"}}>
         <HeroFg>
@@ -107,7 +123,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
     <ContentContainer id="blog" className="pt-5">
         <Row>
             <Col xs={12} className="text-center">
-                <SectionHeading onClick={handleBlogArrow}>Blog <ArrowForward /></SectionHeading>
+                <SectionHeading onClick={handleBlogArrow}>Blog <ArrowForward className='mt-2.5' /></SectionHeading>
             </Col>
         </Row>
         <h1 className="text-center mt-5 pt-5"><strong>Coming Soon!</strong></h1>
