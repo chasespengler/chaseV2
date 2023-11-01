@@ -29,7 +29,7 @@ export const CarouselCardImg = styled.img`
 `
 
 export const CarouselCardBlock = styled.div`
-overflow-x: wrap;
+    overflow-x: wrap;
 
 `
 

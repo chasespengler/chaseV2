@@ -13,10 +13,10 @@ import {
 const CarouselCard = ({ cardInfo }) => {
     
     return (
-        <CarouselCardCol className="flex-wrap" style={{paddingTop: '10px'}}>
-            <CarouselCardInternal>
+        <CarouselCardCol style={{paddingTop: '10px'}}>
+            <CarouselCardInternal className={'w-full'}>
                 <CarouselCardImg src={require("../../images/"+cardInfo['img_src'])} className="card-img-top img-fluid" style={{maxHeight: '100px'}} />
-                <CarouselCardBlock className={"card-block"} style={{'minHeight': '60vh', 'maxHeight': '65vh'}}>
+                <CarouselCardBlock className={"card-block"} style={{'minHeight': '60vh', 'maxHeight': '70vh'}}>
                     <CarouselCardTitle className={"card-title m-3"}>{cardInfo['title']}</CarouselCardTitle>
                     <CarouselCardP>{cardInfo['summary']}</CarouselCardP>
                 </CarouselCardBlock>

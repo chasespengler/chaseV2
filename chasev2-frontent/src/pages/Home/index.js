@@ -51,7 +51,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
 
     const arrowStyle = {
         opacity: isHover ? '1' : '0.5',
-        color: isHover ? 'gold' : 'grey',
+        color: isHover ? 'gold' : 'black',
         transform: isHover ? 'scale(1.5)' : 'scale(1)',
     }
 
@@ -92,7 +92,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         </HeroFg>
     </AboutContainer>
     <ContentContainer id="projects" className="pt-5">
-        <Row style={{"position": "absolute", "width": "100%", "marginTop": "1.5%"}}>
+        <Row style={{"position": "absolute", "width": "100%", "marginTop": "2%"}}>
             <Col xs={12} className="text-center">
                 <SectionHeading onClick={handleProjectArrow}>Projects <ArrowForward className='mt-2.5' /></SectionHeading>
             </Col>
@@ -105,7 +105,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
             }} size={50} />
             <div id='projects-slider' className={'w-full h-screen overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'}>  
                 {projects.map((project, index) => (
-                                <Col xs={11} sm={8} md={5} lg={4} xl={3} className={'inline-block m-2 text-center cursor-pointer hover:scale-105 ease-in-out duration-300'}>
+                                <Col xs={11} sm={8} md={6} lg={5} xl={4} xxl={3} className={'inline-block m-2 text-center cursor-pointer hover:scale-105 ease-in-out duration-300'}>
                                     <CarouselCard key={index} cardInfo = {project} />
                                 </Col>
                             ))}
@@ -122,12 +122,29 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         </HeroFg>
     </AboutContainer>
     <ContentContainer id="blog" className="pt-5">
-        <Row>
+        <Row style={{"position": "absolute", "width": "100%", "marginTop": "2%"}}>
             <Col xs={12} className="text-center">
                 <SectionHeading onClick={handleBlogArrow}>Blog <ArrowForward className='mt-2.5' /></SectionHeading>
             </Col>
         </Row>
-        <h1 className="text-center mt-5 pt-5"><strong>Coming Soon!</strong></h1>
+        <br></br>
+        <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
+            <MdChevronLeft className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+                var slider = document.getElementById('blogs-slider');
+                slider.scrollLeft = slider.scrollLeft - 500;
+            }} size={50} />
+            <div id='blogs-slider' className={'w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'}>  
+                {blogs.map((blog, index) => (
+                                <Col xs={11} sm={8} md={6} lg={5} xl={4} xxl={3} className={'inline-block m-2 text-center cursor-pointer hover:scale-105 ease-in-out duration-300'}>
+                                    <CarouselCard key={index} cardInfo = {blog} />
+                                </Col>
+                            ))}
+            </div>
+            <MdChevronRight className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+                var slider = document.getElementById('blogs-slider');
+                slider.scrollLeft = slider.scrollLeft + 500;
+            }} size={50} />
+        </div>
     </ContentContainer>
     </Home>
   )
