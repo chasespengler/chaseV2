@@ -92,11 +92,12 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         </HeroFg>
     </AboutContainer>
     <ContentContainer id="projects" className="pt-5">
-        <Row style={{"position": "absolute", "width": "100%", "marginTop": "-1.5%"}}>
+        <Row style={{"position": "absolute", "width": "100%", "marginTop": "1.5%"}}>
             <Col xs={12} className="text-center">
                 <SectionHeading onClick={handleProjectArrow}>Projects <ArrowForward className='mt-2.5' /></SectionHeading>
             </Col>
         </Row>
+        <br></br>
         <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
             <MdChevronLeft className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
                 var slider = document.getElementById('projects-slider');
