@@ -13,7 +13,7 @@ import {
 const CarouselCard = ({ cardInfo }) => {
     
     return (
-        <CarouselCardCol className="flex-wrap">
+        <CarouselCardCol className="flex-wrap" style={{paddingTop: '10px'}}>
             <CarouselCardInternal>
                 <CarouselCardImg src={require("../../images/"+cardInfo['img_src'])} className="card-img-top img-fluid" style={{maxHeight: '100px'}} />
                 <CarouselCardBlock className={"card-block"} style={{'minHeight': '60vh', 'maxHeight': '65vh'}}>

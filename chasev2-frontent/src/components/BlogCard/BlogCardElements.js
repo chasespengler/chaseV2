@@ -6,7 +6,6 @@ export const CarouselCardCol = styled(Col)`
     align-self: stretch;
     white-space: normal;
     margin: 25px;
-    /* max-width: 25%; */
 `
 
 export const CarouselCardInternal = styled(Card)`
@@ -26,7 +25,7 @@ export const CarouselCardInternal = styled(Card)`
 `
 
 export const CarouselCardImg = styled.img`
-    max-height: 155px;
+    max-height: 100px;
 `
 
 export const CarouselCardBlock = styled.div`
