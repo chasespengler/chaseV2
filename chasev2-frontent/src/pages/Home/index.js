@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Video from '../../videos/topview_ocean.mp4';
 import Img1 from '../../images/CR_beach1.JPG';
 import Img2 from '../../images/db_beach.JPEG';
+import Book1Img from '../../images/book1.jpg';
+import Book2Img from '../../images/book2.jpg';
 import CarouselCard from '../../components/CarouselCard';
 import {Container, Col, Carousel, Row} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -24,6 +26,7 @@ import {
     ArrowRightBig,
     AboutCarouselP,
     SectionHeading,
+    ImgFgBk,
 } from './HomeElements'
 
 import dater from '../../dater/dater.json'
@@ -55,6 +58,12 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         transform: isHover ? 'scale(1.5)' : 'scale(1)',
     }
 
+    useEffect(() => {
+        aboutContent.map((about, index) => (
+            document.getElementById('carousel-p-' + index).innerHTML = about
+        ))
+    })
+
   return (
     <Home>
     <HeroContainer id="home">
@@ -78,7 +87,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
             {aboutContent.map((about, index) => (
                 <Carousel.Item style={{"height": "100vh"}}>
                     <Container className="d-flex align-content-center" style={{"height": "100%"}}>
-                        <AboutCarouselP>{about}</AboutCarouselP>
+                        <AboutCarouselP id={'carousel-p-' + index}></AboutCarouselP>
                     </Container>
                     {/* <Carousel.Caption><p>{index}</p></Carousel.Caption> */}
                 </Carousel.Item>
@@ -145,6 +154,21 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
                 slider.scrollLeft = slider.scrollLeft + 500;
             }} size={50} />
         </div>
+    </ContentContainer>
+    <ContentContainer>
+        <Row style={{"position": "absolute", "width": "100%"}}>
+            <Col xs={12} className={'my-5'} style={{display: 'flex', justifyContent: 'center'}}>
+                <h3>What I'm Currently Reading:</h3>
+            </Col>
+        </Row>
+        <Row style={{"position": "absolute", "width": "100%", "marginTop": '20vh'}}>
+            <Col xs={12} sm={6} style={{display: 'flex', justifyContent: 'center', marginLeft: '8%'}}>
+                <ImgFgBk src={Book1Img} type="image/JPG"></ImgFgBk>
+            </Col>
+            <Col xs={12} sm={6} style={{display: 'flex', justifyContent: 'center', marginLeft: '-16%'}}>
+                <ImgFgBk src={Book2Img} type="image/JPG"></ImgFgBk>
+            </Col>
+        </Row>
     </ContentContainer>
     </Home>
   )

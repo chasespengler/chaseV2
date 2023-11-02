@@ -78,6 +78,13 @@ export const ImgFg = styled.img`
     background: #232a34;
 `
 
+export const ImgFgBk = styled.img`
+    width: 60%;
+    height: 60%;
+    object-fit: scale-down;
+    -o-object-fit: scale-down;
+`
+
 export const HeroContent = styled.div`
     z-index: 3;
     width: 100%;
