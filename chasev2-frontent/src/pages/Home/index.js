@@ -64,6 +64,22 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         ))
     })
 
+    const [sm, setSM] = useState(false)
+
+    //choose the screen size 
+    const handleResize = () => {
+        if (window.innerWidth < 767) {
+            setSM(true)
+        } else {
+            setSM(false)
+        }
+    }
+    
+    // create an event listener
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+    })
+
   return (
     <Home>
     <HeroContainer id="home">
@@ -162,10 +178,10 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
             </Col>
         </Row>
         <Row style={{"position": "absolute", "width": "100%", "marginTop": '20vh'}}>
-            <Col xs={12} sm={6} style={{display: 'flex', justifyContent: 'center', marginLeft: '8%'}}>
+            <Col sm={12} md={6} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '8%'}}>
                 <ImgFgBk src={Book1Img} type="image/JPG"></ImgFgBk>
             </Col>
-            <Col xs={12} sm={6} style={{display: 'flex', justifyContent: 'center', marginLeft: '-16%'}}>
+            <Col sm={12} md={6} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '-16%', marginTop: sm ? '-20%' : '0'}}>
                 <ImgFgBk src={Book2Img} type="image/JPG"></ImgFgBk>
             </Col>
         </Row>
