@@ -80,7 +80,6 @@ export const ImgFg = styled.img`
 
 export const ImgFgBk = styled.img`
     width: 60%;
-    height: 60%;
     object-fit: scale-down;
     -o-object-fit: scale-down;
 `

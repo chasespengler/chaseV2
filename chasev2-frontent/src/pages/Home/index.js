@@ -4,6 +4,7 @@ import Img1 from '../../images/CR_beach1.JPG';
 import Img2 from '../../images/db_beach.JPEG';
 import Book1Img from '../../images/book1.jpg';
 import Book2Img from '../../images/book2.jpg';
+import Book3Img from '../../images/book3.jpg';
 import CarouselCard from '../../components/CarouselCard';
 import {Container, Col, Carousel, Row} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -178,11 +179,15 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
             </Col>
         </Row>
         <Row style={{"position": "absolute", "width": "100%", "marginTop": '20vh'}}>
-            <Col sm={12} md={6} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '8%'}}>
+            <Col xs={6} md={4} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '8%'}}>
                 <ImgFgBk src={Book1Img} type="image/JPG"></ImgFgBk>
             </Col>
-            <Col sm={12} md={6} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '-16%', marginTop: sm ? '-20%' : '0'}}>
+            <Col xs={6} md={4} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '-8%'}}>
                 <ImgFgBk src={Book2Img} type="image/JPG"></ImgFgBk>
+            </Col>
+            <Col xs={3} style={{display: sm ? 'block' : 'none'}}></Col>
+            <Col xs={6} md={4} style={{display: 'flex', justifyContent: 'center', marginLeft: sm ? '0' : '-8%', marginTop: sm ? '15px' : '0'}}>
+                <ImgFgBk src={Book3Img} type="image/JPG"></ImgFgBk>
             </Col>
         </Row>
     </ContentContainer>
