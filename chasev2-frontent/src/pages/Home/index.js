@@ -166,7 +166,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
                 var slider = document.getElementById('blogs-slider');
                 slider.scrollLeft = slider.scrollLeft - 500;
             }} size={50} />
-            <div id='blogs-slider' className={'w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'}>  
+            <div id='blogs-slider' className={'w-full h-screen overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'}>  
                 {blogs.map((blog, index) => (
                                 <Col xs={11} sm={8} md={6} lg={5} xl={4} xxl={3} className={'inline-block m-2 text-center cursor-pointer hover:scale-105 ease-in-out duration-300'}>
                                     <CarouselCard key={index} cardInfo = {blog} />
