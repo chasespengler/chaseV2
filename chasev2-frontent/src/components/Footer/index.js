@@ -8,7 +8,7 @@ export default function Foot() {
           <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'minHeight': '75px'}} id="footer-text">
               <img style={{"maxHeight": "45px"}} src={require("../../images/CS.png")} alt="logo" id="footer-logo"/>
               <span>
-                Website designed by and property of Chase Spengler.
+                Website designed, built, and owned by Chase Spengler.
               </span>
           </div>
         </footer>
