@@ -51,12 +51,19 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
     const projects = dater['projects'];
     const blogs = dater['blogs'];
 
-    const [isHover, setIsHover] = useState(false)
+    const [isRightHover, setIsRightHover] = useState(false);
+    const [isLeftHover, setIsLeftHover] = useState(false);
 
-    const arrowStyle = {
-        opacity: isHover ? '1' : '0.5',
-        color: isHover ? 'gold' : 'black',
-        transform: isHover ? 'scale(1.5)' : 'scale(1)',
+    const arrowLeftStyle = {
+        opacity: isLeftHover ? '1' : '0.5',
+        color: isLeftHover ? 'gold' : 'black',
+        transform: isLeftHover ? 'scale(1.5)' : 'scale(1)',
+    }
+
+    const arrowRightStyle = {
+        opacity: isRightHover ? '1' : '0.5',
+        color: isRightHover ? 'gold' : 'black',
+        transform: isRightHover ? 'scale(1.5)' : 'scale(1)',
     }
 
     useEffect(() => {
@@ -125,7 +132,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         </Row>
         <br></br>
         <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
-            <MdChevronLeft className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+            <MdChevronLeft className='cursor-pointer' style={arrowLeftStyle} onMouseLeave={() => {setIsLeftHover(false)}} onMouseEnter={() => {setIsLeftHover(true)}} onClick={() => {
                 var slider = document.getElementById('projects-slider');
                 slider.scrollLeft = slider.scrollLeft - 500;
             }} size={50} />
@@ -136,7 +143,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
                                 </Col>
                             ))}
             </div>
-            <MdChevronRight className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+            <MdChevronRight className='cursor-pointer' style={arrowRightStyle} onMouseLeave={() => {setIsRightHover(false)}} onMouseEnter={() => {setIsRightHover(true)}} onClick={() => {
                 var slider = document.getElementById('projects-slider');
                 slider.scrollLeft = slider.scrollLeft + 500;
             }} size={50} />
@@ -155,7 +162,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
         </Row>
         <br></br>
         <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
-            <MdChevronLeft className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+            <MdChevronLeft className='cursor-pointer' style={arrowLeftStyle} onMouseLeave={() => {setIsLeftHover(false)}} onMouseEnter={() => {setIsLeftHover(true)}} onClick={() => {
                 var slider = document.getElementById('blogs-slider');
                 slider.scrollLeft = slider.scrollLeft - 500;
             }} size={50} />
@@ -166,7 +173,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
                                 </Col>
                             ))}
             </div>
-            <MdChevronRight className='cursor-pointer' style={arrowStyle} onMouseLeave={() => {setIsHover(false)}} onMouseEnter={() => {setIsHover(true)}} onClick={() => {
+            <MdChevronRight className='cursor-pointer' style={arrowRightStyle} onMouseLeave={() => {setIsRightHover(false)}} onMouseEnter={() => {setIsRightHover(true)}} onClick={() => {
                 var slider = document.getElementById('blogs-slider');
                 slider.scrollLeft = slider.scrollLeft + 500;
             }} size={50} />
