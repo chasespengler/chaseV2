@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import HomePage from './pages/Home';
 import BlogPage from './pages/Blog';
 import ProjectsPage from './pages/Projects'
+import ProjectSpecificPage from './pages/ProjectSpecific'
 import NavBar from './components/NavBar';
 import {useLocation} from 'react-router-dom';
 import Foot from './components/Footer';
@@ -58,6 +59,7 @@ function App() {
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/blog" element={<BlogPage />} />
         <Route exact path="/projects" element={<ProjectsPage />} />
+        <Route exact path="/projects/project/:id" element={<ProjectSpecificPage />} />
       </Routes>
       <Foot></Foot>
     </Router>
