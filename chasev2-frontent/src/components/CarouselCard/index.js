@@ -15,7 +15,7 @@ const CarouselCard = ({ cardInfo }) => {
     return (
         <CarouselCardCol style={{paddingTop: '10px'}}>
             <CarouselCardInternal className={'w-full'}>
-                <CarouselCardImg src={require("../../images/"+cardInfo['img_src'])} className="card-img-top img-fluid" style={{maxHeight: '100px'}} />
+                <CarouselCardImg src={require("../../images/"+cardInfo['img_src'])} className="card-img-top img-fluid" />
                 <CarouselCardBlock className={"card-block"} style={{'minHeight': '60vh', 'maxHeight': '70vh'}}>
                     <CarouselCardTitle className={"card-title m-3"}>{cardInfo['title']}</CarouselCardTitle>
                     <CarouselCardP>{cardInfo['summary']}</CarouselCardP>
