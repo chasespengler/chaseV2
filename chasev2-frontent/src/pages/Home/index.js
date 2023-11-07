@@ -161,7 +161,10 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
             </Col>
         </Row>
         <br></br>
-        <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
+        <div class='text-center' style={{marginTop: '35vh'}}>
+            <h2>Coming Soon!</h2>
+        </div>
+        {/* <div className='{relative flex items-center h-full}' style={{'marginTop': '50px'}}>
             <MdChevronLeft className='cursor-pointer' style={arrowLeftStyle} onMouseLeave={() => {setIsLeftHover(false)}} onMouseEnter={() => {setIsLeftHover(true)}} onClick={() => {
                 var slider = document.getElementById('blogs-slider');
                 slider.scrollLeft = slider.scrollLeft - 500;
@@ -177,7 +180,7 @@ export default function HomePage({ toggleNavButtonsTypeHome }) {
                 var slider = document.getElementById('blogs-slider');
                 slider.scrollLeft = slider.scrollLeft + 500;
             }} size={50} />
-        </div>
+        </div> */}
     </ContentContainer>
     <ContentContainer>
         <Row style={{"position": "absolute", "width": "100%"}}>

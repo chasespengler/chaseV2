@@ -27,7 +27,10 @@ export default function BlogPage() {
                 <br></br>
                 <h1>Blog</h1>
             </div>
-            <div className={'relative flex items-center'}>
+            <div class='text-center'>
+                <h2>Coming Soon!</h2>
+            </div>
+            {/* <div className={'relative flex items-center'}>
                 <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideLeft} size={40} />
                 <div id="slider" className={'w-full h-[500px] overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'}>                   
                     {blogs.map((blog, index) => (
@@ -37,7 +40,7 @@ export default function BlogPage() {
                     ))}
                 </div>
                 <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={40} />
-            </div>
+            </div> */}
         </BlogContainer>
     );
 }
